@@ -1,8 +1,8 @@
 <h1>All my tasks</h1>
 <% @tasks.each do |task| %>
   <p>
-    <%= link_to task.title,  task_path(task)%>
+    <%= link_to task.title,  task_path(task)%> /
     <%= link_to "Delete task", task_path(task), method: :delete %>
   </p>
 <% end %>
-<%= link_to "Add a new task", tasks_new_path %>
+<%= link_to "Add a new task", new_task_path %>
